@@ -1,8 +1,7 @@
 require('dotenv').config(); 
 const { REST } = require('@discordjs/rest');
 const { SlashCommandBuilder, Routes } = require('discord.js');
-const { units } = require('./unit_list');
-console.log(units);
+
 
 const commands = [
 	new SlashCommandBuilder()
@@ -12,7 +11,6 @@ const commands = [
 		option.setName('unitname')
 		.setDescription('Select unit.')
 		.setRequired(true)
-		.addChoices(...units)
 	)
 	.addStringOption(option => 
 		option.setName('imagelink')

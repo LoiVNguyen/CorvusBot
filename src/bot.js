@@ -20,7 +20,6 @@ client.on('interactionCreate', async interaction => {
 	const { commandName } = interaction;
 
 	if (commandName === 'storebuild') {
-		await interaction.reply('Store build command working in progress!');
 		StoreBuild.storeBuild(interaction);
 	} 
 	else if (commandName === 'getbuild') {
