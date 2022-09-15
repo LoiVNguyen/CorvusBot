@@ -1,4 +1,4 @@
-CorvusBot
+# CorvusBot
 Discord bot for Epic Seven utilities.
 
 Learning Javascript, Mongo.DB, and API integration by making a Discord bot to help with storing
