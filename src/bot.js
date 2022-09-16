@@ -3,7 +3,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const { Client, GatewayIntentBits } = require('discord.js');
 const StoreBuild = require('../all_commands/storebuild');
-
+const GetBuild = require('../all_commands/getbuild');
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -23,7 +23,7 @@ client.on('interactionCreate', async interaction => {
 		StoreBuild.storeBuild(interaction);
 	} 
 	else if (commandName === 'getbuild') {
-		await interaction.reply('Get build command working in progress!');
+		GetBuild.getBuild(interaction);
 	} 
 	else if (commandName === 'deletebuild') {
 		await interaction.reply('Delete build command working in progress!');

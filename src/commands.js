@@ -17,7 +17,18 @@ const commands = [
 		.setDescription('Link to image.')
 		.setRequired(true)),
 
-	new SlashCommandBuilder().setName('getbuild').setDescription('Gets build associated with user and unit name'),
+	new SlashCommandBuilder()
+	.setName('getbuild')
+	.setDescription('Gets build associated with user and unit name')
+	.addStringOption(option => 
+		option.setName('unitname')
+		.setDescription('Select unit.')
+		.setRequired(true)
+	)
+	.addUserOption(option => 
+		option.setName('userhandle')
+		.setDescription('Select which user to obtain build from in form of @user. Leave empty for self.')
+	),
 	new SlashCommandBuilder().setName('deletebuild').setDescription('Deletes build associated with user and unit name')
 ]
 	.map(command => command.toJSON());

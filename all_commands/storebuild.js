@@ -2,6 +2,7 @@ const profileModel = require('../src/profile_schema');
 const { units } = require('../src/unit_list');
 
 
+// Creates new profile and stores unit.
 async function createProfileAndStore(interaction, unitName, imageLink) {
     const result = await profileModel.create({
         'userID': interaction.user,
@@ -14,6 +15,7 @@ async function createProfileAndStore(interaction, unitName, imageLink) {
 };
 
 
+// Stores into Mongoose Database.
 async function storeIntoDB(interaction, unitName, imageLink) {
     const duplicate = await profileModel.findOne( {userID: interaction.user} ).exec();
     if (duplicate) {
@@ -52,7 +54,7 @@ async function storeIntoDB(interaction, unitName, imageLink) {
 };
 
 
-// Checks if unit name is in all units database.
+// Stores unit into database if valid input.
 function storeUnitToDB(interaction, unitName, imageLink) {
     firstLetter = unitName.toUpperCase()[0];
     if (firstLetter in units && unitName.toUpperCase() in units[firstLetter]) {
@@ -64,8 +66,7 @@ function storeUnitToDB(interaction, unitName, imageLink) {
         .then(console.log(`${ correctName } has been stored.`))
         .catch(console.error);
     }
-    else
-    {
+    else {
         interaction.reply(`"${ unitName }" is not a valid character name.`)
         .then(console.log(`"${ unitName }" is not a valid character name.`))
         .catch(console.error);
