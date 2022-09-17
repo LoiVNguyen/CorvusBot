@@ -9,11 +9,11 @@ async function getUnitFromDB(interaction, unitName) {
         userInfo = interaction.user;
     };
     const duplicate = await profileModel.find( 
-        { userID: userInfo }, { builds: { $elemMatch: {unit: unitName }}} );
-
-    console.log(duplicate[0].builds[0].image);    
-
-    if (duplicate) {
+        { userID: userInfo }, 
+        { builds: { $elemMatch: {unit: unitName }}}
+    );   
+    
+    if (duplicate.length >= 1 && duplicate[0].builds.length == 1) {
         interaction.reply(duplicate[0].builds[0].image);
     }
     else {
