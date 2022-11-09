@@ -29,7 +29,14 @@ const commands = [
 		option.setName('userhandle')
 		.setDescription('Select which user to obtain build from in form of @user. Leave empty for self.')
 	),
-	new SlashCommandBuilder().setName('deletebuild').setDescription('Deletes build associated with user and unit name')
+	new SlashCommandBuilder()
+	.setName('deletebuild')
+	.setDescription('Deletes build associated with user and unit name')
+	.addStringOption(option => 
+		option.setName('unitname')
+		.setDescription('Select unit.')
+		.setRequired(true)
+	)
 ]
 	.map(command => command.toJSON());
 

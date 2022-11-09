@@ -29,9 +29,11 @@ exports.units = {
     'ARAMINTHA': 'Aramintha',
     'ARBITER VILDRED': 'Arbiter Vildred',
     'ARBY': 'Arbiter Vildred',
+    'ARUNKA': 'Arunka',
     'AVILDRED': 'Arbiter Vildred',
     "ARCHDEMON'S SHADOW": "Archdemon's Shadow",
     'AMERU': "Archdemon's Shadow",
+    'ADS': "Archdemon's Shadow",
     'ARIA': 'Aria',
     'ARMIN': 'Armin',
     'ASSASSIN CARTUJA': 'Assassin Cartuja',
@@ -203,6 +205,7 @@ exports.units = {
 //   H
 //---------------------------------------------------------
     'H': {
+    'HANDGUY': 'Mediator Kawerik',
     'HATAAN': 'Hataan',
     'HASOL': 'Hasol',
     'HASTE': 'Haste',
@@ -213,7 +216,8 @@ exports.units = {
     'HYUFINE': 'Holiday Yufine',
     'HOLY FLAME ADIN': 'Holy Flame Adin',
     'HURADO': 'Hurado',
-    'HWAYOUNG': 'Hwayoung'
+    'HWAYOUNG': 'Hwayoung',
+    'HWA': 'Hwayoung'
     },
 //---------------------------------------------------------
 //   I
@@ -271,12 +275,14 @@ exports.units = {
     'LIDICA': 'Lidica',
     'LILIAS': 'Lilias',
     'LILIBET': 'Lilibet',
+    'LHC': 'Lionheart Cermia',
     'LIONHEART CERMIA': 'Lionheart Cermia',
     'LCERMIA': 'Lionheart Cermia',
     'LITTLE QUEEN CHARLOTTE': 'Little Queen Charlotte',
     'LQC': 'Little Queen Charlotte',
     'LORINA': 'Commander Lorina',
     'LOTS': 'Lots',
+    'LUA': 'Lua',
     'LUCY': 'Lucy',
     'LUDWIG': 'Ludwig',
     'LULUCA': 'Luluca',
@@ -349,6 +355,7 @@ exports.units = {
     'R': {
     'RAM': 'Ram',
     'RAN': 'Ran',
+    'RAT': 'Choux',
     'RAS': 'Adventure Ras',
     'RAVI': 'Ravi',
     'RAY': 'Ray',
